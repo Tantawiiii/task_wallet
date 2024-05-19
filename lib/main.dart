@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:task_wallet/routes/app_routes.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( Wallet(appRouter: AppRouter(),));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Wallet extends StatelessWidget {
+  const Wallet({super.key, required this.appRouter});
 
-  // This widget is the root of your application.
+  final AppRouter appRouter;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      onGenerateRoute: appRouter.generateRoute,
     );
   }
 }
