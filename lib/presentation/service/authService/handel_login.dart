@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:task_wallet/utils/colors_code.dart';
 
 import '../../ui/screens/home_screen.dart';
-import '../../ui/widget/custom_toast.dart';
+import '../../ui/widget/show_snackbar.dart';
 import 'auth_service.dart';
 
 void handleLogin(BuildContext context, TextEditingController usernameController,
@@ -21,21 +20,8 @@ void handleLogin(BuildContext context, TextEditingController usernameController,
       ),
     );
   } else {
-    _showSnackBar(context, 'Login failed!');
+    showCustomSnackBar(context, "Credentials are incorrect when Login!", Colors.red,
+        'asset/icons/fail_icon.svg');
   }
 }
 
-void _showSnackBar(BuildContext context, String message) {
-  ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(
-      duration: const Duration(seconds: 2),
-      backgroundColor: Colors.transparent,
-      elevation: 0,
-      content: CustomToast(
-        backColor: ColorsCode.RED,
-        message: message,
-        svgIconPath: 'asset/icons/fail_icon.svg',
-      ),
-    ),
-  );
-}

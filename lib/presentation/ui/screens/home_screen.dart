@@ -1,7 +1,6 @@
 import 'package:bounce/bounce.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_svg/svg.dart';
 import 'package:motion/motion.dart';
 import 'package:task_wallet/presentation/ui/widget/build_wallet_item.dart';
@@ -10,7 +9,6 @@ import 'package:task_wallet/presentation/ui/widget/build_wallet_item_user.dart';
 import '../../../utils/colors_code.dart';
 import '../../models/user_model.dart';
 import '../../service/db_service/db_services.dart';
-import '../widget/custom_button.dart';
 
 class HomeScreen extends StatefulWidget {
   final String username;
