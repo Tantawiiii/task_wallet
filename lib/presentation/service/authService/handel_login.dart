@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task_wallet/utils/colors_code.dart';
 
-import '../ui/screens/home_screen.dart';
-import '../ui/widget/custom_toast.dart';
+import '../../ui/screens/home_screen.dart';
+import '../../ui/widget/custom_toast.dart';
 import 'auth_service.dart';
 
 void handleLogin(BuildContext context, TextEditingController usernameController,

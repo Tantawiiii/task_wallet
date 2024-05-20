@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:task_wallet/utils/colors_code.dart';
-import '../../service/handel_login.dart';
-import '../../service/handel_register.dart';
+import '../../service/authService/handel_login.dart';
+import '../../service/authService/handel_register.dart';
 import '../widget/custom_button.dart';
 import '../widget/custom_text_field.dart';
 
