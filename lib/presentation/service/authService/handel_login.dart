@@ -6,22 +6,36 @@ import 'auth_service.dart';
 
 void handleLogin(BuildContext context, TextEditingController usernameController,
     TextEditingController passwordController) async {
-  final success = await AuthService.login(
-    usernameController.text.trim(),
-    passwordController.text.trim(),
-  );
-  if (success) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => HomeScreen(
-          username: usernameController.text.trim(),
-        ),
-      ),
+
+  if (usernameController.text.isNotEmpty && passwordController.text.isNotEmpty) {
+    final success = await AuthService.login(
+      usernameController.text.trim(),
+      passwordController.text.trim(),
     );
-  } else {
-    showCustomSnackBar(context, "Credentials are incorrect when Login!", Colors.red,
+
+    if (success) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => HomeScreen(
+            username: usernameController.text.trim(),
+          ),
+        ),
+      );
+    } else {
+      showCustomSnackBar(context, "Credentials are incorrect when Login!", Colors.red,
+          'asset/icons/fail_icon.svg');
+    }
+
+
+  }  else {
+    showCustomSnackBar(context, "Please Enter your data", Colors.red,
         'asset/icons/fail_icon.svg');
   }
+
+
+
+
+
 }
 
