@@ -16,7 +16,7 @@ class SplashScreen extends StatelessWidget {
           height: 450,
           fit: BoxFit.fitHeight,
           onLoaded: (composition) {
-            Future.delayed(const Duration(milliseconds: 2700), () {
+            Future.delayed(const Duration(milliseconds: 2200), () {
               Navigator.pushReplacementNamed(
                 context,
                 loginScreenRoute,
