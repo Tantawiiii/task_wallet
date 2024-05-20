@@ -1,36 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:task_wallet/presentation/ui/widget/show_snackbar.dart';
 import 'package:task_wallet/utils/colors_code.dart';
 import '../../ui/widget/custom_toast.dart';
 
 import 'auth_service.dart';
 
-void handleRegistration(BuildContext context, TextEditingController usernameController, TextEditingController passwordController) async {
-  final success = await AuthService.register(
-    usernameController.text.trim(),
-    passwordController.text.trim(),
-  );
+void handleRegistration(
+    BuildContext context,
+    TextEditingController usernameController,
+    TextEditingController passwordController) async {
 
-  if (success) {
-    _showSnackBar(context, 'User registered successfully!',ColorsCode.BLUE,'');
+
+  if (usernameController.text.isNotEmpty && passwordController.text.isNotEmpty) {
+
+
+    final success = await AuthService.register(
+      usernameController.text.trim(),
+      passwordController.text.trim(),
+    );
+
+    if (success) {
+      showCustomSnackBar(
+          context, "User registered successfully!", Colors.blue, "");
+    } else {
+      showCustomSnackBar(context, "Credentials are incorrect when Register!",
+          Colors.red, 'asset/icons/fail_icon.svg');
+    }
 
   }  else {
-    _showSnackBar(context,   'Registration failed!',ColorsCode.RED, 'asset/icons/fail_icon.svg');
-
+    showCustomSnackBar(context, "Please Enter your data to register", Colors.red,
+        'asset/icons/fail_icon.svg');
   }
 
-}
-
-void _showSnackBar(BuildContext context, String message, Color backColor, String iconPath) {
-  ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(
-      duration: const Duration(seconds:2),
-      backgroundColor: Colors.transparent,
-      elevation: 0,
-      content: CustomToast(
-        backColor: backColor,
-        message: message,
-        svgIconPath: iconPath,
-      ),
-    ),
-  );
 }
