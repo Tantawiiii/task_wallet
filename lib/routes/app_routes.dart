@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task_wallet/ui/screens/login_screen.dart';
-import 'package:task_wallet/ui/screens/splash_screen.dart';
 
+
+import '../presentation/ui/screens/login_screen.dart';
+import '../presentation/ui/screens/splash_screen.dart';
 import '../utils/strings.dart';
 
 class AppRouter {

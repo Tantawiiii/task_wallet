@@ -19,6 +19,8 @@ class ColorsCode {
   static Color  YellowCard = hexToColor('#FBB03B');
   static Color  RedCard = hexToColor('#D85F5F');
   static Color  PurpleCard = hexToColor('#B13BFB');
+  static Color  grayOff = hexToColor('#4E4E4E');
+  static Color  grayOn = hexToColor('#A2A2A2');
 
 
 
