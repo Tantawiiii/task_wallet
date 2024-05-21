@@ -1,16 +1,8 @@
-# task_wallet
+# Task wallet App
 
-This App create to make technical task for Systel Telecom Company.
+This App was created to do the technical tasks for Systel Telecom Company.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## => Screens:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  <img src="screenshot_2.png" width="200" height="500">   &nbsp;&nbsp;&nbsp;&nbsp;     <img src="search.png" width="200" height="500">  &nbsp;&nbsp;&nbsp;&nbsp;    <img src="details.png" width="200" height="500">   
